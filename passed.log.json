@@ -1,0 +1,126 @@
+{
+    "resource": {
+        "action": "passed",
+            "meta": {
+            "result": true,
+                "passed": 3,
+                    "total_failed": 0,
+                        "hard_failed": 0,
+                            "soft_failed": 0,
+                                "advisory_failed": 0,
+                                    "duration_ms": 0,
+                                        "sentinel": {
+                "schema_version": 1,
+                    "data": {
+                    "sentinel-policy-networking": {
+                        "can_override": false,
+                            "error": null,
+                                "policies": [
+                                    {
+                                        "allowed_failure": false,
+                                        "error": null,
+                                        "policy": "sentinel-policy-networking/advisory-mandatory-tags",
+                                        "result": true,
+                                        "trace": {
+                                            "description": "This policy uses the Sentinel tfplan/v2 import to require that\nspecified AWS resources have all mandatory tags",
+                                            "error": null,
+                                            "print": "",
+                                            "result": true,
+                                            "rules": {
+                                                "main": {
+                                                    "desc": "Main rule",
+                                                    "ident": "main",
+                                                    "position": {
+                                                        "filename": "./advisory-mandatory-tags.sentinel",
+                                                        "offset": 1244,
+                                                        "line": 38,
+                                                        "column": 1
+                                                    },
+                                                    "value": true
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "allowed_failure": false,
+                                        "error": null,
+                                        "policy": "sentinel-policy-networking/soft-mandatory-vpn",
+                                        "result": true,
+                                        "trace": {
+                                            "description": "This policy uses the Sentinel tfplan/v2 import to require that\nAWS VPNs only used allowed DH groups",
+                                            "error": null,
+                                            "print": "",
+                                            "result": true,
+                                            "rules": {
+                                                "main": {
+                                                    "desc": "Main rule",
+                                                    "ident": "main",
+                                                    "position": {
+                                                        "filename": "./soft-mandatory-vpn.sentinel",
+                                                        "offset": 740,
+                                                        "line": 23,
+                                                        "column": 1
+                                                    },
+                                                    "value": true
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "allowed_failure": false,
+                                        "error": null,
+                                        "policy": "sentinel-policy-networking/hard-mandatory-policy",
+                                        "result": true,
+                                        "trace": {
+                                            "description": "This policy uses the Sentinel tfplan/v2 import to validate that no security group\nrules have the CIDR \"0.0.0.0/0\" for ingress rules.  It covers both the\naws_security_group and the aws_security_group_rule resources which can both\ndefine rules.",
+                                            "error": null,
+                                            "print": "",
+                                            "result": true,
+                                            "rules": {
+                                                "main": {
+                                                    "desc": "",
+                                                    "ident": "main",
+                                                    "position": {
+                                                        "filename": "./hard-mandatory-policy.sentinel",
+                                                        "offset": 2136,
+                                                        "line": 58,
+                                                        "column": 1
+                                                    },
+                                                    "value": true
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                    "result": true
+                    }
+                }
+            },
+            "comment": null,
+                "run": {
+                "id": "run-HaRrisx1HvCbkQ6G",
+                    "message": "Triggered via UI"
+            },
+            "workspace": {
+                "id": "ws-LvRrPmVrm4MSnDC9",
+                    "name": "aws-networking-sentinel-policed"
+            }
+        },
+        "type": "policy_check",
+            "id": "polchk-oXQAGNcD2GJCtBS9"
+    },
+    "request": {
+        "id": null
+    },
+    "auth": {
+        "impersonator_id": null,
+            "type": "Client",
+                "accessor_id": "user-XcfwsoNPGCbux6wP",
+                    "description": "nvibert",
+                        "organization_id": ""
+    },
+    "timestamp": "2021-11-25T18:26:58.000Z",
+        "version": "0",
+            "type": "Resource",
+                "id": "e9f160c9-69db-48a0-9f6a-4bc3c266e72e"
+}
